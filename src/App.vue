@@ -1,16 +1,16 @@
 <template>
-  <div class="w-screen h-screen flex flex-col items-center bg-green_secondary">
+  <div class="w-screen h-full min-h-screen flex flex-col items-center bg-green_secondary">
     <img
       src="./assets/logo.png"
       alt="logo"
       class="w-40 mb-6 mt-4"
       :class="{ 'w-28': filteredImage }"
     />
-    <h1 class="text-3xl text-center font-bold w-72 mb-2 text-gray_primary">
+    <h1 class="text-3xl text-center font-bold w-10/12 sm:w-72 mb-2 text-gray_primary">
       <span v-if="!filteredImage"> Bem vindo ao editor de fotos </span>
       <span v-else> Foto personalizada com sucesso! </span>
     </h1>
-    <p class="mb-4 text-gray_primary">
+    <p class="mb-4 w-10/12 text-center text-gray_primary">
       <span v-if="!filteredImage"> Escolha sua melhor foto para começar! </span>
       <span v-else> Muito bem! Agora o que deseja fazer? </span>
     </p>
@@ -22,19 +22,19 @@
     </div>
     <div
       v-else
-      class="w-10/12 sm:w-96 aspect-square rounded-lg bg-white overflow-hidden p-2"
+      class="w-10/12 sm:w-96 aspect-square rounded-lg bg-white overflow-hidden p-2 mb-16"
     >
       <div
-        class="border-dashed border-2 border-gray_b_primary w-full h-full rounded-lg flex flex-col justify-center items-center"
+        class="border-dashed border-2 border-gray_b_primary w-full h-full rounded-lg flex flex-col justify-center items-center p-2"
       >
         <Spinner v-if="loading" class="w-18" />
         <img
           v-else
           src="./assets/image-placeholder.png"
           alt="logo"
-          class="w-18 mb-2"
+          class="max-w-sm mb-2"
         />
-        <h2 class="text-gray_primary mb-1 sm:mb-8 w-1/2 text-center">
+        <h2 class="text-gray_primary mb-1 sm:mb-8 sm:w-1/2 w-10/12 text-center">
           <span v-if="!loading"> Toque no botão para escolher uma foto </span>
           <span v-else> Estamos personalizando sua foto, aguarde! </span>
         </h2>
@@ -47,7 +47,7 @@
         <button
           v-if="!loading"
           @click="$refs.fileInput.click()"
-          class="block w-3/5 py-2 px-4 rounded-lg border-0 text-sm font-semibold bg-green_primary text-white hover:bg-green_tertiary"
+          class="block w-10/12 sm:w-3/5 py-2 px-4 rounded-lg border-0 text-sm font-semibold bg-green_primary text-white hover:bg-green_tertiary"
         >
           ESCOLHER FOTO
         </button>
@@ -69,7 +69,7 @@
         <DownloadIcon class="mr-2" />
         BAIXAR
       </a>
-      <p class="text-gray_secondary text-center mt-8">SER UM EMBAIXADOR</p>
+      <p class="text-gray_secondary text-center mt-8 mb-8">SER UM EMBAIXADOR</p>
     </div>
     <Share v-if="showShare" @cancelShare="touggleShare" />
     <Error
