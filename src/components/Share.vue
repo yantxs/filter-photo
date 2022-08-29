@@ -7,8 +7,9 @@
       <div class="flex flex-col w-full">
         <ShareNetwork
           network="whatsapp"
-          :url="filteredImage"
-          title="Baixe a sua foto com o filtro."
+          url="https://perfil.drvictor1900.com/"
+          title=" Vamos juntos com Dr. Victor rumo à Câmara Federal! 🚀💥"
+          hashtags="FederalDoArnaldinho,DrVictorDeputadoFederal1900"
           class="px-6 py-4 flex items-center gap-4 font-bold text-gray_primary hover:bg-gray_b_primary/[.1]"
         >
           <img src="../assets/social/whatsapp.png" alt="whatsapp logo">
@@ -16,8 +17,10 @@
         </ShareNetwork>
         <ShareNetwork
           network="facebook"
-          :url="filteredImage"
-          title="Baixe a sua foto com o filtro."
+          url="https://perfil.drvictor1900.com/"
+          title=" Vamos juntos com Dr. Victor rumo à Câmara Federal! 🚀💥 "
+          quote=" Vamos juntos com Dr. Victor rumo à Câmara Federal! 🚀💥 "
+          hashtags="FederalDoArnaldinho,DrVictorDeputadoFederal1900"
           class="px-6 py-4 flex items-center gap-4 font-bold text-gray_primary hover:bg-gray_b_primary/[.1]"
         >
           <img src="../assets/social/facebook.png" alt="facebook logo">
@@ -25,9 +28,11 @@
         </ShareNetwork>
         <ShareNetwork
           network="twitter"
-          :url="filteredImage"
-          title="Baixe a sua foto com o filtro."
+          url="https://perfil.drvictor1900.com/"
+          title=" Vamos juntos com Dr. Victor rumo à Câmara Federal! 🚀💥 "
+          hashtags="FederalDoArnaldinho,DrVictorDeputadoFederal1900"
           class="px-6 py-4 flex items-center gap-4 font-bold text-gray_primary hover:bg-gray_b_primary/[.1]"
+          :media="filteredImage"
         >
           <img src="../assets/social/twitter.png" alt="twitter logo">
           Twitter
